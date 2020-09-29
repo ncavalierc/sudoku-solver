@@ -164,9 +164,10 @@ class SudokuGrid:
         empty_pos = []
         for i in range(81):
             if self.grid_values[i] == 0:
-                tup = (, )
+                val = i%9
+                print(val)
+                tup = (int(i/9), i%9)
                 empty_pos.append(tup)
-        print(empty_pos)
         return empty_pos
 
     def write(self, i, j, v):
